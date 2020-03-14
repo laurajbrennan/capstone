@@ -31,3 +31,24 @@
   line-height: $line-height;
   color: $color;
 }
+
+@mixin text($font-size, $line-height, $color) {
+  font-family: "Roboto";
+  font-size: $font-size;
+  line-height: $line-height;
+  color: $color;
+}
+
+@mixin light($font-size, $line-height, $color) {
+  font-family: "RobotoLight";
+  font-size: $font-size;
+  line-height: $line-height;
+  color: $color;
+}
+
+@mixin bold($font-size, $line-height, $color) {
+  font-family: "RobotoBold";
+  font-size: $font-size;
+  line-height: $line-height;
+  color: $color;
+}

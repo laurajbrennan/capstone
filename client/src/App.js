@@ -28,18 +28,22 @@ class App extends Component {
             </Route>
 
             <Route path="/browse" exact>
+              <Header />
               <Browse />
             </Route>
 
             <Route path="/messages" exact>
+              <Header />
               <Messages />
             </Route>
 
             <Route path="/login" exact>
+              <Header />
               <Login />
             </Route>
 
             <Route path="/signup" exact>
+              <Header />
               <Signup />
             </Route>
           </Switch>
