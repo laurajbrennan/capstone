@@ -20,7 +20,7 @@ class App extends Component {
           <Switch>
             <Route path="/" exact>
               <Header />
-              <Home />
+              <Home isLoggedIn={this.state.isLoggedIn} />
             </Route>
 
             <Route path="/menu" exact>
@@ -29,22 +29,22 @@ class App extends Component {
 
             <Route path="/browse" exact>
               <Header />
-              <Browse />
+              <Browse isLoggedIn={this.state.isLoggedIn} />
             </Route>
 
             <Route path="/messages" exact>
               <Header />
-              <Messages />
+              <Messages isLoggedIn={this.state.isLoggedIn} />
             </Route>
 
             <Route path="/login" exact>
               <Header />
-              <Login />
+              <Login isLoggedIn={this.state.isLoggedIn} />
             </Route>
 
             <Route path="/signup" exact>
               <Header />
-              <Signup />
+              <Signup isLoggedIn={this.state.isLoggedIn} />
             </Route>
           </Switch>
         </Router>

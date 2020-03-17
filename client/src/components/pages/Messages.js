@@ -1,9 +1,8 @@
 import React, { Component } from "react";
 
 export class Messages extends Component {
+  state = { isLoggedIn: false, loading: true, user: {}, items: [] };
   render() {
-    state = { isLoggedIn: false, loading: true, user: {}, items: [] };
-
     return <div></div>;
   }
 }
