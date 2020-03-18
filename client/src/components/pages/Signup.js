@@ -4,6 +4,7 @@ import axios from "axios";
 
 export class Signup extends Component {
   state = { isLoggedIn: false, loading: true, user: {}, items: [] };
+
   render() {
     const createNewUser = user => {
       axios
@@ -28,7 +29,7 @@ export class Signup extends Component {
     };
 
     return (
-      <div classname="signup">
+      <div className="signup">
         <form className="signup__form" action="submit" onSubmit={newUser}>
           <h1 className="signup__title">Sign up for a Waste Not account</h1>
           <div className="signup__input">
@@ -64,7 +65,7 @@ export class Signup extends Component {
               name="password"
             ></input>
           </div>
-          <Link to="">
+          <Link to="/login">
             <span className="signup__login-link">
               Already have an account? Log in here.
             </span>

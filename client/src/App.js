@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import "./styles/main.css";
 import "./index.css";
-import { BrowserRouter as Router, Link, Switch, Route } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Header from "./components/Header";
 import Menu from "./components/pages/Menu";
 import Home from "./components/pages/Home";
@@ -24,7 +24,7 @@ class App extends Component {
             </Route>
 
             <Route path="/menu" exact>
-              <Menu />
+              <Menu isLoggedIn={this.state.isLoggedIn} />
             </Route>
 
             <Route path="/browse" exact>

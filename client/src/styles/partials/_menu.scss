@@ -24,5 +24,14 @@
 
   &__list {
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding-top: 20px;
+  }
+
+  &__link {
+    @include text(20px, 28px, $secondary);
+    padding: 10px 40px;
+    border-bottom: 1px solid $secondary;
   }
 }

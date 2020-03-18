@@ -1,1 +1,18 @@
-[{"id":"26b1ca17-30f3-408a-8769-f1f722546caa","name":"jane smith","username":"jsmith92","email":"jsmith92@email.com","items":[],"conversations":[]}]
+[
+  {
+    "id": "26b1ca17-30f3-408a-8769-f1f722546caa",
+    "name": "jane smith",
+    "username": "jsmith92",
+    "email": "jsmith92@email.com",
+    "items": [],
+    "conversations": []
+  },
+  {
+    "id": "cd2e1cc3-0824-4658-87d1-7f122f161d9f",
+    "name": "Spartacus Rex",
+    "username": "spartacus",
+    "email": "spartacus@iam.com",
+    "items": [],
+    "conversations": []
+  }
+]
