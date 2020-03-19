@@ -10,6 +10,9 @@ app.use(express.json());
 const usersData = require("./routes/api/users");
 app.use("/users", usersData);
 
+const itemsData = require("./routes/api/items");
+app.use("/items", itemsData);
+
 // start the server and listen on port 5000
 app.listen(PORT, () => {
   console.log(`server is running at: ${BACKEND_URL}:${PORT}`);
