@@ -137,11 +137,113 @@ body {
 }
 
 .menu__link {
-  font-family: "Roboto";
+  font-family: "Roboto", sans-serif;
   font-size: 20px;
   line-height: 28px;
   color: #049376;
   padding: 10px 40px;
   border-bottom: 1px solid #049376;
+}
+
+.menu__link--bold {
+  font-weight: bold;
+}
+
+.browse {
+  background-color: #f1fffa;
+  padding: 20px;
+}
+
+.browse__filter {
+  margin: 12px 0 32px 0;
+  border: 2px solid #005031;
+  border-radius: 6px;
+  background-color: #f1fffa;
+  color: #005031;
+  height: 50px;
+  width: 100%;
+}
+
+.item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  border-bottom: 2px solid #005031;
+  margin-bottom: 16px;
+}
+
+.item__icon--offered {
+  float: left;
+  height: 40px;
+  width: 40px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-right: 12px;
+  background-image: url("../assets/icons/offered.svg");
+}
+
+.item__icon--wanted {
+  float: left;
+  height: 40px;
+  width: 40px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-right: 12px;
+  background-image: url("../assets/icons/wanted.svg");
+}
+
+.item__text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.item__type, .item__text {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  line-height: 16px;
+  color: #000000;
+}
+
+.item__area {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  line-height: 16px;
+  color: #7e7e7e;
+  margin-bottom: 8px;
+}
+
+.login {
+  background-color: #c9f5e4;
+  margin: 0;
+  padding: 40px 20px;
+  height: 100vh;
+}
+
+.login__title {
+  font-family: "RobotoLight", sans-serif;
+  font-size: 24px;
+  line-height: 28px;
+  color: #005031;
 }
 /*# sourceMappingURL=main.css.map */

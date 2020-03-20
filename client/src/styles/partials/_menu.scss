@@ -33,5 +33,9 @@
     @include text(20px, 28px, $secondary);
     padding: 10px 40px;
     border-bottom: 1px solid $secondary;
+
+    &--bold {
+      font-weight: bold;
+    }
   }
 }

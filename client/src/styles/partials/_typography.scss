@@ -33,21 +33,21 @@
 }
 
 @mixin text($font-size, $line-height, $color) {
-  font-family: "Roboto";
+  font-family: "Roboto", sans-serif;
   font-size: $font-size;
   line-height: $line-height;
   color: $color;
 }
 
 @mixin light($font-size, $line-height, $color) {
-  font-family: "RobotoLight";
+  font-family: "RobotoLight", sans-serif;
   font-size: $font-size;
   line-height: $line-height;
   color: $color;
 }
 
 @mixin bold($font-size, $line-height, $color) {
-  font-family: "RobotoBold";
+  font-family: "RobotoBold", sans-serif;
   font-size: $font-size;
   line-height: $line-height;
   color: $color;

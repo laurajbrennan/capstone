@@ -13,7 +13,13 @@ const router = express.Router();
 router.get("/", (req, res) => {
   const getItems = items.map(item => {
     return {
-      id: item.id
+      id: item.id,
+      ownedBy: item.ownedBy,
+      type: item.type,
+      title: item.title,
+      description: item.description,
+      area: item.area,
+      conversations: item.conversations
     };
   });
   res.json(getItems);

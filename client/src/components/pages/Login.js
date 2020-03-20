@@ -32,9 +32,9 @@ export class Login extends Component {
     };
 
     return (
-      <div className="login">
+      <section className="login">
         <form className="login__form" action="submit" onSubmit={handleLogin}>
-          <h1 className="login__title">Login to your Waste Not account</h1>
+          <span className="login__title">Login to your Waste Not account</span>
 
           <div className="login__input">
             <h3 className="login__label">USERNAME</h3>
@@ -62,7 +62,7 @@ export class Login extends Component {
             Login
           </button>
         </form>
-      </div>
+      </section>
     );
   }
 }

@@ -1,0 +1,10 @@
+// mixins for buttons
+
+@mixin lightbutton {
+  border: 2px solid $primary;
+  border-radius: 6px;
+  background-color: $background-light;
+  color: $primary;
+  height: 50px;
+  width: 100%;
+}

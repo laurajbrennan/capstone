@@ -42,9 +42,9 @@ export class NewItem extends Component {
 
           <div className="newitem__input">
             <h3 className="newitem__label">OFFERED OR WANTED</h3>
-            <input type="radio" name="type" value="offered"></input>
+            <input type="radio" name="type" value="OFFERED: "></input>
             <label htmlFor="offered">Offered</label>
-            <input type="radio" name="type" value="wanted"></input>
+            <input type="radio" name="type" value="WANTED: "></input>
             <label htmlFor="wanted">Wanted</label>
           </div>
 

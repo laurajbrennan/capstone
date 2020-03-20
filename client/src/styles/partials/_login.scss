@@ -1,0 +1,10 @@
+.login {
+  background-color: $background;
+  margin: 0;
+  padding: 40px 20px;
+  height: 100vh;
+
+  &__title {
+    @include light(24px, 28px, $primary);
+  }
+}

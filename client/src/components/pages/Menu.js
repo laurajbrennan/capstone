@@ -15,6 +15,11 @@ export default function Menu() {
             </Link>
             <span className="menu__title">Waste Not</span>
             <div className="menu__list">
+              <span className="menu__link menu__link--bold">
+                {isAuthenticated
+                  ? "You are logged in"
+                  : "You are not logged in"}
+              </span>
               <Link to="/login" className="menu__link">
                 Log into your account
               </Link>
@@ -30,11 +35,6 @@ export default function Menu() {
               <Link to="/messages" className="menu__link">
                 My messages
               </Link>
-              <span className="menu__link">
-                {isAuthenticated
-                  ? "You are logged in"
-                  : "You are not logged in"}
-              </span>
             </div>
           </section>
         );

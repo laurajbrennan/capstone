@@ -2,7 +2,7 @@
   {
     "id": "1aivjruutn6a",
     "ownedBy": "user1",
-    "status": "OFFERED: ",
+    "type": "OFFERED: ",
     "title": "Old-fashioned waffle iron, assorted kitchen stuff",
     "description": "Up for grabs! One cast-iron waffle maker, the old- fashioned kind you hold over a fire or your stovetop and it makes one waffle at a time. Got it at a garage sale, used it once. One older, but still very functional, immersion blender. Breville brand, still works great. Four assorted teacups and saucers, not matching but in complimentary colours. Three metal spatula and one metal ladle. I can meet anywhere in Kits, or near Waterfront Stn downtown in work hours.",
     "area": "Kitsilano",
@@ -11,7 +11,7 @@
   {
     "id": "1af0jruup5gu",
     "ownedBy": "user5",
-    "status": "WANTED: ",
+    "type": "WANTED: ",
     "title": "",
     "description": "I am looking for any gently-used sports equipment for a community center project. I'll take anything you've got! Thanks!!",
     "area": "North Vancouver",
@@ -20,7 +20,7 @@
   {
     "id": "1aivjtnf0juu",
     "ownedBy": "user1",
-    "status": "OFFERED: ",
+    "type": "OFFERED: ",
     "title": "Lavender soaps",
     "description": "I've got a cupboard full of artisinal lavender hand soaps, gifted to me over the years by family members. I'll never use them all, and soap is important right now so if you need some, please let me know. ",
     "area": "Downtown Vancouver",
@@ -29,8 +29,16 @@
   {
     "id": "32654290-18e9-40b4-886d-0f2d48022f15",
     "title": "Old-fashioned waffle iron, assorted kitchen stuff",
-    "type": "offered",
+    "type": "OFFERED: ",
     "text": "Up for grabs! One cast-iron waffle maker, the old- fashioned kind you hold over a fire or your stovetop and it makes one waffle at a time. Got it at a garage sale, used it once. One older, but still very functional, immersion blender. Breville brand, still works great. Four assorted teacups and saucers, not matching but in complimentary colours. Three metal spatula and one metal ladle. I can meet anywhere in Kits, or near Waterfront Stn downtown in work hours.",
+    "area": "Downtown",
+    "conversations": []
+  },
+  {
+    "id": "7227e7a9-1282-4a50-bc10-f961f9a666e1",
+    "title": "Home-grown oranges",
+    "type": "OFFERED: ",
+    "text": "My orange tree has gone wild this year! Please help me by eating some of them, I have so many. Happy to meet wherever with as many oranges as you want, or come to pick them from the source - I'm in Kits.",
     "area": "Downtown",
     "conversations": []
   }
