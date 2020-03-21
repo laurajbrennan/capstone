@@ -11,8 +11,9 @@ import Login from "./components/pages/Login";
 import Signup from "./components/pages/Signup";
 import NewItem from "./components/pages/NewItem";
 import AuthContextProvider from "./contexts/AuthContext";
+import UserContextProvider from "./contexts/UserContext";
 import { default as Chatkit } from "@pusher/chatkit-server";
-import { instanceKey, instanceLocator } from "./config";
+// import { instanceKey, instanceLocator } from "./config";
 
 class App extends Component {
   state = {
@@ -22,25 +23,25 @@ class App extends Component {
     currentId: ""
   };
 
-  createChatkitUser(username) {
-    Chatkit.createChatkitUser({
-      id: username,
-      name: username
-    })
-      .then(currentUser => {
-        this.setState({ currentUsername: username, currentId: username });
-      })
-      .catch(err => {
-        if (err.status === 400) {
-          this.setState({
-            currentUsername: username,
-            currentId: username
-          });
-        } else {
-          console.log(err.status);
-        }
-      });
-  }
+  // createChatkitUser(username) {
+  //   Chatkit.createChatkitUser({
+  //     id: username,
+  //     name: username
+  //   })
+  //     .then(currentUser => {
+  //       this.setState({ currentUsername: username, currentId: username });
+  //     })
+  //     .catch(err => {
+  //       if (err.status === 400) {
+  //         this.setState({
+  //           currentUsername: username,
+  //           currentId: username
+  //         });
+  //       } else {
+  //         console.log(err.status);
+  //       }
+  //     });
+  // }
   // componentDidMount() {
   //   const messageManager = new Chatkit({
   //     instanceLocator: instanceLocator,
@@ -67,45 +68,47 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <AuthContextProvider>
-          <Router>
-            <Switch>
-              <Route path="/" exact>
-                <Header />
-                <Home isLoggedIn={this.state.isLoggedIn} />
-              </Route>
+        <UserContextProvider>
+          <AuthContextProvider>
+            <Router>
+              <Switch>
+                <Route path="/" exact>
+                  <Header />
+                  <Home isLoggedIn={this.state.isLoggedIn} />
+                </Route>
 
-              <Route path="/menu" exact>
-                <Menu isLoggedIn={this.state.isLoggedIn} />
-              </Route>
+                <Route path="/menu" exact>
+                  <Menu isLoggedIn={this.state.isLoggedIn} />
+                </Route>
 
-              <Route path="/browse" exact>
-                <Header />
-                <Browse isLoggedIn={this.state.isLoggedIn} />
-              </Route>
+                <Route path="/browse" exact>
+                  <Header />
+                  <Browse isLoggedIn={this.state.isLoggedIn} />
+                </Route>
 
-              <Route path="/new" exact>
-                <Header />
-                <NewItem isLoggedIn={this.state.isLoggedIn} />
-              </Route>
+                <Route path="/new" exact>
+                  <Header />
+                  <NewItem isLoggedIn={this.state.isLoggedIn} />
+                </Route>
 
-              <Route path="/messages" exact>
-                <Header />
-                <Messages isLoggedIn={this.state.isLoggedIn} />
-              </Route>
+                <Route path="/messages" exact>
+                  <Header />
+                  <Messages isLoggedIn={this.state.isLoggedIn} />
+                </Route>
 
-              <Route path="/login" exact>
-                <Header />
-                <Login isLoggedIn={this.state.isLoggedIn} />
-              </Route>
+                <Route path="/login" exact>
+                  <Header />
+                  <Login isLoggedIn={this.state.isLoggedIn} />
+                </Route>
 
-              <Route path="/signup" exact>
-                <Header />
-                <Signup onSubmit={this.createChatkitUser} />
-              </Route>
-            </Switch>
-          </Router>
-        </AuthContextProvider>
+                <Route path="/signup" exact>
+                  <Header />
+                  <Signup onSubmit={this.createChatkitUser} />
+                </Route>
+              </Switch>
+            </Router>
+          </AuthContextProvider>
+        </UserContextProvider>
       </div>
     );
   }

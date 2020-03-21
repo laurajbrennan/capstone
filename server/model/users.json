@@ -1,18 +1,1 @@
-[
-  {
-    "id": "26b1ca17-30f3-408a-8769-f1f722546caa",
-    "name": "jane smith",
-    "username": "jsmith92",
-    "email": "jsmith92@email.com",
-    "items": [],
-    "conversations": []
-  },
-  {
-    "id": "cd2e1cc3-0824-4658-87d1-7f122f161d9f",
-    "name": "Spartacus Rex",
-    "username": "spartacus",
-    "email": "spartacus@iam.com",
-    "items": [],
-    "conversations": []
-  }
-]
+[{"id":"26b1ca17-30f3-408a-8769-f1f722546caa","name":"jane smith","username":"jsmith92","email":"jsmith92@email.com","items":[],"conversations":[]},{"id":"cd2e1cc3-0824-4658-87d1-7f122f161d9f","name":"Spartacus Rex","username":"spartacus","email":"spartacus@iam.com","items":[],"conversations":[]},{"id":"347d8556-6a44-467c-95b4-e02abf1e6eb0","name":"Billy NoMates","username":"ihavenofriends","email":"billy@no.mates","items":[],"conversations":[]},{"id":"2329739c-ca0f-4a9f-a2d8-0fbcee13a903","name":"Dracula","username":"dracula1","email":"dracula1001@blood.com","items":[],"conversations":[]},{"id":"e21dde48-cea4-47cd-8688-5d9ffb6353ed","name":"test","username":"test","email":"test","items":[],"conversations":[]},{"id":"f4ba195f-b4b7-41a2-86ad-6f1a6548f233","name":"fool","username":"fool","email":"a;sldkfj","items":[],"conversations":[]},{"id":"eb264f8b-ac0f-4450-afc2-1cd4d91ee06e","name":"testing","username":"testing","email":"test","items":[],"conversations":[]}]

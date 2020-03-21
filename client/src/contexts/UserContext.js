@@ -1,19 +1,44 @@
-import React, { Component, createContext } from "react";
+import React, { createContext, useState } from "react";
+import axios from "axios";
+const uuid = require("uuid/v4");
 
 export const UserContext = createContext();
 
-export default class UserContextProvider extends Component {
-  state = {
-    user: {}
+const UserContextProvider = props => {
+  const [user, setUser] = useState([
+    { id: "", name: "", username: "", email: "" }
+  ]);
+  const updateUser = user => {
+    setUser([
+      {
+        id: uuid(),
+        name: user.name,
+        username: user.username,
+        email: user.email
+      }
+    ]);
+    axios.post("/users", {
+      id: user.id,
+      name: user.name,
+      username: user.username,
+      email: user.email
+    });
   };
-  setUser = userData => {
-    this.setState({ user: userData });
+  const logoutUser = () => {
+    setUser([
+      {
+        id: "",
+        name: "",
+        username: "",
+        email: ""
+      }
+    ]);
   };
-  render() {
-    return (
-      <UserContext.Provider value={{ ...this.state, setUser: this.setUser }}>
-        {this.props.children}
-      </UserContext.Provider>
-    );
-  }
-}
+  return (
+    <UserContext.Provider value={{ user, updateUser, logoutUser }}>
+      {props.children}
+    </UserContext.Provider>
+  );
+};
+
+export default UserContextProvider;
