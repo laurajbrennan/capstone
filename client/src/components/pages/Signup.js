@@ -1,11 +1,13 @@
 import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import { UserContext } from "../../contexts/UserContext";
+import { AuthContext } from "../../contexts/AuthContext";
 import { Redirect } from "react-router-dom";
 
 export default function Signup() {
   const { updateUser } = useContext(UserContext);
-  const [toBrowse, setToBrowse] = useState(0);
+  const { toggleAuth } = useContext(AuthContext);
+  const [toBrowse, setToBrowse] = useState(false);
   const newUser = event => {
     event.preventDefault();
     let user = {
@@ -14,9 +16,9 @@ export default function Signup() {
       email: event.target.email.value
     };
     updateUser(user);
-    console.log(user);
+    toggleAuth();
     document.querySelector(".signup__form").reset();
-    setToBrowse(1);
+    setToBrowse(true);
   };
 
   return (

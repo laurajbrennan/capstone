@@ -7,16 +7,17 @@ import axios from "axios";
 
 export default function Login() {
   const { loginUser } = useContext(UserContext);
+  const { toggleAuth } = useContext(AuthContext);
   const [toBrowse, setToBrowse] = useState(false);
   const login = user1 => {
     axios.get("/users").then(res => {
       let userArray = res.data;
-      console.log(userArray);
       let userFound = userArray.find(user => {
         return user.username === user1.username;
       });
       if (userFound) {
         loginUser(userFound);
+        toggleAuth();
         setToBrowse(true);
       } else {
         return window.alert("Username not found, please try again.");

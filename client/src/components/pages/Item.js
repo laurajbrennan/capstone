@@ -1,17 +1,20 @@
 import React, { Component } from "react";
 import axios from "axios";
+import { UserContext } from "../../contexts/UserContext";
 
 export class Item extends Component {
   state = { loading: true, user: {}, item: {} };
+  static contextType = UserContext;
 
   componentDidMount() {
-    console.log("component did mount ran");
+    const { user } = this.context;
     axios.get(`/items/${this.props.match.params.id}`).then(res => {
-      console.log(res.data);
       this.setState({
         item: res.data,
-        loading: false
+        loading: false,
+        user: user[0]
       });
+      console.log(this.state.user);
     });
   }
 
