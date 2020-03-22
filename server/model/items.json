@@ -41,5 +41,45 @@
     "text": "My orange tree has gone wild this year! Please help me by eating some of them, I have so many. Happy to meet wherever with as many oranges as you want, or come to pick them from the source - I'm in Kits.",
     "area": "Downtown",
     "conversations": []
+  },
+  {
+    "id": "6093a532-ae85-4d0a-8d53-c533efe1c023",
+    "title": "Homebrew equipment for beer",
+    "type": "OFFERED: ",
+    "text": "I am realistically just not getting around to using this kit, so please come take it off my hands! Brand new, never used. ",
+    "area": "West Vancouver",
+    "conversations": []
+  },
+  {
+    "id": "409caa22-7754-4181-89fd-4de7104489c2",
+    "title": "Rollerblades",
+    "type": "WANTED: ",
+    "text": "size 9.5",
+    "area": "Surrey",
+    "conversations": []
+  },
+  {
+    "id": "6d7238c9-2ae3-4dc2-bc92-f89f661d3e86",
+    "title": "asdf",
+    "type": "WANTED: ",
+    "text": "asdfa",
+    "area": "Downtown",
+    "conversations": []
+  },
+  {
+    "id": "a213167a-798b-43b7-aa51-9c86d6edab38",
+    "title": "asdfasdf",
+    "type": "WANTED: ",
+    "text": "asdfasdf",
+    "area": "Downtown",
+    "conversations": []
+  },
+  {
+    "id": "f9acf6ab-829c-4103-9b74-697c1db9aa8b",
+    "title": "Rubber floor mats for car",
+    "type": "OFFERED: ",
+    "text": "I bought these in the wrong size for my car on accident, then forgot to return them to the store. Come take away my shame!! ",
+    "area": "Coquitlam",
+    "conversations": []
   }
 ]

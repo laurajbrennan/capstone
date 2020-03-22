@@ -5,7 +5,7 @@ import { Redirect } from "react-router-dom";
 
 export default function Signup() {
   const { updateUser } = useContext(UserContext);
-  const [toBrowse, setToBrowse] = useState(false);
+  const [toBrowse, setToBrowse] = useState(0);
   const newUser = event => {
     event.preventDefault();
     let user = {
@@ -16,7 +16,7 @@ export default function Signup() {
     updateUser(user);
     console.log(user);
     document.querySelector(".signup__form").reset();
-    setToBrowse(true);
+    setToBrowse(1);
   };
 
   return (

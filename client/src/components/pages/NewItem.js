@@ -3,6 +3,16 @@ import axios from "axios";
 
 export class NewItem extends Component {
   state = { isLoggedIn: false, loading: true, user: {}, items: [] };
+
+  componentDidMount() {
+    let user = localStorage.getItem("user");
+    console.log(user);
+    // localStorage.setItem("user", user);
+    let userParsed = JSON.parse(user)[0];
+    console.log(userParsed);
+    this.setState({ user: userParsed });
+  }
+
   render() {
     const createNewItem = item => {
       axios.post("/items", {
@@ -15,7 +25,9 @@ export class NewItem extends Component {
 
     const newItem = event => {
       event.preventDefault();
+
       let item = {
+        ownedBy: this.state.user.username,
         title: event.target.title.value,
         type: event.target.type.value,
         text: event.target.text.value,

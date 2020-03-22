@@ -25,11 +25,25 @@ router.get("/", (req, res) => {
   res.json(getItems);
 });
 
+// get a specific item
+router.get("/:id", (req, res) => {
+  let item = items.find(item => {
+    return item.id === req.params.id;
+  });
+  if (item.id === req.params.id) {
+    return res.json(item);
+  } else {
+    res.status(404).json({
+      error: `Item ID${req.params.id} is not found`
+    });
+  }
+});
+
 // create new item
 router.post("/", (req, res) => {
   const newItem = {
     id: helper.getNewId(),
-    // ownedBy: ,
+    ownedBy: req.body.ownedBy,
     title: req.body.title,
     type: req.body.type,
     text: req.body.text,

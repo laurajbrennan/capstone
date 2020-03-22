@@ -1,26 +1,26 @@
-import React, { Component } from "react";
+import React, { Component, useEffect } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
 
 export class Browse extends Component {
-  state = { isLoggedIn: false, loading: true, user: {}, items: [] };
+  state = { loading: true, user: {}, items: [] };
 
   componentDidMount() {
     axios.get("/items").then(response => {
       // console.log(response.data);
       this.setState({
         items: response.data,
-        loading: false
+        loading: false,
+        user: localStorage.getItem("user")
       });
     });
   }
 
   render() {
     const buildItems = this.state.items.map(item => {
-      // console.log(item);
       return (
         <div className="item" key={item.id}>
-          <Link to={`/browse/${item.id}`} exact>
+          <Link to={`/browse/${item.id}`} id={item.id}>
             {item.type === "OFFERED: " ? (
               <div className="item__icon--offered"></div>
             ) : (

@@ -6,23 +6,17 @@ import Header from "./components/Header";
 import Menu from "./components/pages/Menu";
 import Home from "./components/pages/Home";
 import Browse from "./components/pages/Browse";
+import Item from "./components/pages/Item";
 import Messages from "./components/pages/Messages";
 import Login from "./components/pages/Login";
 import Signup from "./components/pages/Signup";
 import NewItem from "./components/pages/NewItem";
 import AuthContextProvider from "./contexts/AuthContext";
 import UserContextProvider from "./contexts/UserContext";
-import { default as Chatkit } from "@pusher/chatkit-server";
+// import { default as Chatkit } from "@pusher/chatkit-server";
 // import { instanceKey, instanceLocator } from "./config";
 
 class App extends Component {
-  state = {
-    isLoggedIn: false,
-    loading: false,
-    currentUsername: "",
-    currentId: ""
-  };
-
   // createChatkitUser(username) {
   //   Chatkit.createChatkitUser({
   //     id: username,
@@ -74,36 +68,47 @@ class App extends Component {
               <Switch>
                 <Route path="/" exact>
                   <Header />
-                  <Home isLoggedIn={this.state.isLoggedIn} />
+                  <Home />
                 </Route>
 
                 <Route path="/menu" exact>
-                  <Menu isLoggedIn={this.state.isLoggedIn} />
+                  <Menu />
                 </Route>
 
                 <Route path="/browse" exact>
                   <Header />
-                  <Browse isLoggedIn={this.state.isLoggedIn} />
+                  <Browse />
                 </Route>
+
+                <Route
+                  path="/browse/:id"
+                  exact
+                  render={routerProps => (
+                    <>
+                      <Header />
+                      <Item {...routerProps} />
+                    </>
+                  )}
+                />
 
                 <Route path="/new" exact>
                   <Header />
-                  <NewItem isLoggedIn={this.state.isLoggedIn} />
+                  <NewItem />
                 </Route>
 
                 <Route path="/messages" exact>
                   <Header />
-                  <Messages isLoggedIn={this.state.isLoggedIn} />
+                  <Messages />
                 </Route>
 
                 <Route path="/login" exact>
                   <Header />
-                  <Login isLoggedIn={this.state.isLoggedIn} />
+                  <Login />
                 </Route>
 
                 <Route path="/signup" exact>
                   <Header />
-                  <Signup onSubmit={this.createChatkitUser} />
+                  <Signup />
                 </Route>
               </Switch>
             </Router>
