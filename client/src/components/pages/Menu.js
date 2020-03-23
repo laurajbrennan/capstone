@@ -8,7 +8,9 @@ export default function Menu() {
       <Link className="menu__exit" to="/">
         <img className="menu__exit-icon" src={X} alt="exit menu icon" />
       </Link>
-      <span className="menu__title">Waste Not</span>
+      <Link to="/">
+        <span className="menu__title">Waste Not</span>
+      </Link>
       <div className="menu__list">
         <span className="menu__link menu__link--bold">
           {/* {isAuthenticated

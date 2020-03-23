@@ -1,6 +1,6 @@
 import React from "react";
 import axios from "axios";
-import { UserContext } from "../../contexts/UserContext";
+// import { UserContext } from "../../contexts/UserContext";
 
 export default function Message(props) {
   const postMessage = e => {
@@ -15,8 +15,8 @@ export default function Message(props) {
       method: "put",
       url: `http://localhost:5000/items/${props.item.id}`,
       headers: { "Access-Control-Allow-Origin": "*" },
-      data: newMessage 
-    });
+      data: newMessage
+    }).then(res => console.log(res));
     document.querySelector(".message__form").reset();
   };
   return (

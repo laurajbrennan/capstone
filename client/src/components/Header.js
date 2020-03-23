@@ -8,7 +8,9 @@ export default function Header() {
       <Link className="header__menu" to="/menu">
         <img className="header__menu-icon" src={Menu} alt="menu icon" />
       </Link>
-      <span className="header__text">Waste Not</span>
+      <Link to="/">
+        <span className="header__text">Waste Not</span>
+      </Link>
     </nav>
   );
 }

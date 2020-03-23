@@ -59,24 +59,26 @@ router.post("/", (req, res) => {
 router.put("/:id", (req, res) => {
   console.log(req);
   const newMessage = {
-              id: helper.getNewId(),
-              sentBy: req.body.sentBy,
-              item: req.body.item,
-              itemOwner: req.body.itemOwner,
-              text: req.body.text
-            }
+    id: helper.getNewId(),
+    sentBy: req.body.sentBy,
+    item: req.body.item,
+    itemOwner: req.body.itemOwner,
+    text: req.body.text
+  };
   const found = items.some(item => item.id === req.params.id);
-  if (found) {items.forEach(item => {
-    if(item.id === req.params.id) {
-      item.conversations.push(newMessage)
-    }  
-    helper.writeJSONFile(allItems, items);
-res.json(items)
-  })} else { res
+  if (found) {
+    items.forEach(item => {
+      if (item.id === req.params.id) {
+        item.conversations.push(newMessage);
+      }
+      helper.writeJSONFile(allItems, items);
+      res.json(items);
+    });
+  } else {
+    res
       .status(404)
-      .json({ errorMessage: `Item with ID: ${req.params.id} not found` });}
-})
-
-
+      .json({ errorMessage: `Item with ID: ${req.params.id} not found` });
+  }
+});
 
 module.exports = router;

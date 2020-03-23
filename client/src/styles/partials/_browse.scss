@@ -17,6 +17,7 @@
   &__filter {
     margin: 12px 0 32px 0;
     @include lightbutton;
+    width: 100%;
   }
 }
 
