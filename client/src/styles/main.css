@@ -390,6 +390,7 @@ body {
   background-color: #f1fffa;
   margin: 0;
   padding: 40px 20px;
+  height: 100vh;
 }
 
 .an-item__header {

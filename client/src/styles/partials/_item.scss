@@ -2,6 +2,7 @@
   background-color: $background-light;
   margin: 0;
   padding: 40px 20px;
+  height: 100vh;
   &__header {
     @include text(20px, 28px, $primary);
     display: flex;

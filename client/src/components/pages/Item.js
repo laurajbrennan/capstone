@@ -20,13 +20,12 @@ export class Item extends Component {
         loading: false,
         user: user[0]
       });
-      console.log(this.state.user);
+      // console.log(this.state.user);
     });
   }
 
   showMessage = () => {
     if (this.state.user.username === "") {
-      console.log("not logged in");
       return (
         <div className="an-item__message">
           <Link className="an-item__login" to="/login">
@@ -35,7 +34,6 @@ export class Item extends Component {
         </div>
       );
     } else {
-      console.log("logged in!");
       return (
         <div className="an-item__messages">
           <Message user={this.state.user} item={this.state.item} />

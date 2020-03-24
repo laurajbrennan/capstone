@@ -13,7 +13,6 @@ export class Messages extends Component {
     );
     const showMessages = messages.map(message => {
       if (message.sentBy === username) {
-        console.log(message);
         return (
           <div className="message__container" key={message.id}>
             <div className="message__labels">

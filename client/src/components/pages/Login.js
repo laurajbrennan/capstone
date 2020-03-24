@@ -1,13 +1,13 @@
 import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import { UserContext } from "../../contexts/UserContext";
-import { AuthContext } from "../../contexts/AuthContext";
+// import { AuthContext } from "../../contexts/AuthContext";
 import { Redirect } from "react-router-dom";
 import axios from "axios";
 
 export default function Login() {
   const { loginUser } = useContext(UserContext);
-  const { toggleAuth } = useContext(AuthContext);
+  // const { toggleAuth } = useContext(AuthContext);
   const [toBrowse, setToBrowse] = useState(false);
   const login = user1 => {
     axios.get("/users").then(res => {
@@ -17,7 +17,7 @@ export default function Login() {
       });
       if (userFound) {
         loginUser(userFound);
-        toggleAuth();
+        // toggleAuth();
         setToBrowse(true);
       } else {
         return window.alert("Username not found, please try again.");
@@ -30,9 +30,9 @@ export default function Login() {
     let user = {
       username: event.target.username.value
     };
-    console.log(user);
+    // console.log(user);
     login(user);
-    toggleAuth();
+    // toggleAuth();
     document.querySelector(".login__form").reset();
   };
 

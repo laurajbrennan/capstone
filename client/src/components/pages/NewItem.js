@@ -19,7 +19,7 @@ export class NewItem extends Component {
         ownedBy: item.ownedBy,
         title: item.title,
         type: item.type,
-        text: item.text,
+        description: item.description,
         area: item.area
       });
     };
@@ -30,7 +30,7 @@ export class NewItem extends Component {
         ownedBy: this.state.user.username,
         title: event.target.title.value,
         type: event.target.type.value,
-        text: event.target.text.value,
+        description: event.target.description.value,
         area: event.target.area.value
       };
       console.log(item);
@@ -70,7 +70,7 @@ export class NewItem extends Component {
               className="newitem__text"
               type="textarea"
               placeholder="ex: I've got a wooden coffee table that doesn't work in my living room anymore, who wants it?"
-              name="text"
+              name="description"
             ></textarea>
           </div>
 
