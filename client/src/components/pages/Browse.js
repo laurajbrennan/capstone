@@ -44,7 +44,8 @@ export class Browse extends Component {
       return (
         <section className="browse">
           <button className="browse__filter">
-            Placeholder for drop-down menu to filter by neighbourhood
+            Filter by neighbourhood
+            <div className="browse__dropdown"></div>
           </button>
           {buildItems}
         </section>
