@@ -320,4 +320,344 @@ body {
   line-height: 28px;
   color: #005031;
 }
+
+.login__input {
+  padding-top: 32px;
+}
+
+.login__label {
+  font-family: "Roboto", sans-serif;
+  font-size: 12px;
+  line-height: 14px;
+  color: #005031;
+}
+
+.login__name, .login__username, .login__email, .login__password {
+  background-color: #ffffff;
+  border-radius: 10px;
+  width: 100%;
+  height: 50px;
+  padding-left: 16px;
+  border: none;
+}
+
+.login__button-container {
+  margin-top: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.login__signup-link {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  line-height: 22px;
+  color: #005031;
+  width: 50%;
+}
+
+.login__submit-button {
+  border: 2px solid #005031;
+  border-radius: 6px;
+  background-color: #049376;
+  color: #ffffff;
+  height: 50px;
+  width: 50%;
+  font-size: 20px;
+}
+
+.signup {
+  background-color: #c9f5e4;
+  margin: 0;
+  padding: 40px 20px;
+  height: 120vh;
+}
+
+.signup__submit-button {
+  border: 2px solid #005031;
+  border-radius: 6px;
+  background-color: #049376;
+  color: #ffffff;
+  height: 50px;
+  width: 50%;
+  font-size: 14px;
+}
+
+.an-item {
+  background-color: #f1fffa;
+  margin: 0;
+  padding: 40px 20px;
+}
+
+.an-item__header {
+  font-family: "Roboto", sans-serif;
+  font-size: 20px;
+  line-height: 28px;
+  color: #005031;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.an-item__body {
+  padding-top: 24px;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  line-height: 26px;
+  color: #000000;
+}
+
+.an-item__footer {
+  border-top: 2px solid #005031;
+  margin-top: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.an-item__footer-text {
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  line-height: 16px;
+  color: #545454;
+  margin-top: 6px;
+}
+
+.an-item__message {
+  width: 100%;
+  border: 2px solid #005031;
+  border-radius: 6px;
+  background-color: #049376;
+  color: #ffffff;
+  height: 50px;
+  height: 40px;
+  width: 100%;
+  text-align: center;
+  padding-top: 4px;
+  margin-top: 24px;
+}
+
+.an-item__login {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  line-height: 16px;
+  color: #ffffff;
+}
+
+.an-item__messages {
+  margin-top: 24px;
+  background-color: #f1fffa;
+}
+
+.message__form {
+  padding-top: 16px;
+  min-height: 40vh;
+}
+
+.message__label {
+  font-family: "Roboto", sans-serif;
+  font-size: 12px;
+  line-height: 14px;
+  color: #005031;
+}
+
+.message__text {
+  width: 100%;
+  height: 80px;
+  padding: 16px;
+  border-radius: 10px;
+  border: 2px solid #049376;
+}
+
+.message__submit {
+  border: 2px solid #005031;
+  border-radius: 6px;
+  background-color: #049376;
+  color: #ffffff;
+  height: 50px;
+  width: 50%;
+  margin-top: 24px;
+  float: right;
+}
+
+.message__container {
+  margin-top: 24px;
+  padding: 12px 0;
+  border-top: 2px solid #049376;
+}
+
+.message__labels {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.message__sender, .message__sent-date {
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  line-height: 16px;
+  color: #545454;
+}
+
+.message__sent-text {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  line-height: 20px;
+  color: #000000;
+}
+
+.myitems {
+  background-color: #c9f5e4;
+  margin: 0;
+  padding: 40px 20px;
+  height: 100vh;
+}
+
+.myitems__link {
+  font-family: "Roboto", sans-serif;
+  font-size: 20px;
+  line-height: 30px;
+  color: #005031;
+}
+
+.myitems__title {
+  font-family: "Roboto", sans-serif;
+  font-size: 24px;
+  line-height: 32px;
+  color: #005031;
+}
+
+.myitems__list {
+  margin-top: 24px;
+  padding-top: 16px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border-top: 2px solid #005031;
+}
+
+.myitems__item {
+  margin-bottom: 24px;
+  padding-bottom: 24px;
+  border-bottom: 2px solid #005031;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.newitem {
+  background-color: #c9f5e4;
+  padding: 40px 20px;
+  margin: 0;
+}
+
+.newitem__title {
+  font-family: "Roboto", sans-serif;
+  font-size: 24px;
+  line-height: 32px;
+  color: #005031;
+}
+
+.newitem__input {
+  margin-top: 32px;
+}
+
+.newitem__input--area {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: relative;
+}
+
+.newitem__label {
+  font-family: "Roboto", sans-serif;
+  font-size: 12px;
+  line-height: 14px;
+  color: #005031;
+}
+
+.newitem__post-title {
+  width: 100%;
+  height: 50px;
+  border-radius: 10px;
+  background-color: #ffffff;
+  padding-left: 16px;
+  border: none;
+}
+
+.newitem__text {
+  height: 100px;
+  width: 100%;
+  border-radius: 10px;
+  background-color: #ffffff;
+  padding: 16px;
+  border: none;
+}
+
+.newitem__explain {
+  font-family: "Roboto", sans-serif;
+  font-size: 12px;
+  line-height: 12px;
+  color: #545454;
+  margin-bottom: 16px;
+}
+
+.newitem__area {
+  border: 2px solid #005031;
+  border-radius: 6px;
+  background-color: #f1fffa;
+  color: #005031;
+  height: 50px;
+  width: 172px;
+  padding-left: 16px;
+  margin-bottom: 20px;
+}
+
+.newitem__submit-button {
+  border: 2px solid #005031;
+  border-radius: 6px;
+  background-color: #049376;
+  color: #ffffff;
+  height: 50px;
+  width: 100%;
+  margin-top: 24px;
+}
+
+.dropdown {
+  background-image: url("../assets/icons/play.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 20px;
+  width: 20px;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  position: relative;
+  z-index: 3000;
+  top: 35px;
+  left: 128px;
+}
 /*# sourceMappingURL=main.css.map */

@@ -2,10 +2,14 @@ import React, { Component } from "react";
 import axios from "axios";
 import { UserContext } from "../../contexts/UserContext";
 import { Link } from "react-router-dom";
-import Message from "./Message";
+import Message from "../Message";
 
 export class Item extends Component {
-  state = { loading: true, user: {}, item: {}, message: false };
+  state = {
+    loading: true,
+    user: {},
+    item: {}
+  };
   static contextType = UserContext;
 
   componentDidMount() {
@@ -21,7 +25,23 @@ export class Item extends Component {
   }
 
   showMessage = () => {
-    this.setState({ message: true });
+    if (this.state.user.username === "") {
+      console.log("not logged in");
+      return (
+        <div className="an-item__message">
+          <Link className="an-item__login" to="/login">
+            Please login to leave a message
+          </Link>
+        </div>
+      );
+    } else {
+      console.log("logged in!");
+      return (
+        <div className="an-item__messages">
+          <Message user={this.state.user} item={this.state.item} />
+        </div>
+      );
+    }
   };
 
   render() {
@@ -34,8 +54,8 @@ export class Item extends Component {
     } else {
       return (
         <>
-          <section className="item" key={this.state.item.id}>
-            <header className="item__header">
+          <section className="an-item" key={this.state.item.id}>
+            <header className="an-item__header">
               {this.state.item.type === "OFFERED: " ? (
                 <div className="item__icon--offered"></div>
               ) : (
@@ -43,27 +63,18 @@ export class Item extends Component {
               )}
               <span>{this.state.item.title}</span>
             </header>
-            <main className="item__body">
+            <main className="an-item__body">
               <p>{this.state.item.description}</p>
-              <div className="item__footer">
-                <span>{this.state.item.area}</span>
-              </div>
-              <div className="item__message-container">
-                {this.state.user.id === "" ? (
-                  <Link to="/login">
-                    <button>Send a message</button>
-                  </Link>
-                ) : (
-                  <button onClick={this.showMessage}>Send a message</button>
-                )}
-              </div>
-              <div
-                className="item__message"
-                display={this.state.message === false ? "none" : "block"}
-              >
-                <Message user={this.state.user} item={this.state.item} />
+              <div className="an-item__footer">
+                <span className="an-item__footer-text">
+                  {this.state.item.area}
+                </span>
+                <span className="an-item__footer-text">
+                  Posted (placeholder for timestamp)
+                </span>
               </div>
             </main>
+            {this.showMessage()}
           </section>
         </>
       );

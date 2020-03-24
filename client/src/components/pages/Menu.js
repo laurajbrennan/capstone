@@ -1,8 +1,16 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import X from "../../assets/icons/x.svg";
+import { UserContext } from "../../contexts/UserContext";
+import { AuthContext } from "../../contexts/AuthContext";
 
 export default function Menu() {
+  const { logoutUser } = useContext(UserContext);
+  const { isAuthenticated, toggleAuth } = useContext(AuthContext);
+  const fullLogout = () => {
+    logoutUser();
+    toggleAuth();
+  };
   return (
     <section className="menu">
       <Link className="menu__exit" to="/">
@@ -13,9 +21,16 @@ export default function Menu() {
       </Link>
       <div className="menu__list">
         <span className="menu__link menu__link--bold">
-          {/* {isAuthenticated
-                  ? "You are logged in"
-                  : "You are not logged in"} */}
+          {isAuthenticated === false ? (
+            "You are not logged in yet"
+          ) : (
+            <button
+              className="menu__link menu__link--bold"
+              onClick={fullLogout}
+            >
+              Click here to log out
+            </button>
+          )}
         </span>
         <Link to="/login" className="menu__link">
           Log into your account
@@ -29,13 +44,10 @@ export default function Menu() {
         <Link to="/new" className="menu__link">
           Post a new offer or request
         </Link>
-        <Link to="/messages" className="menu__link">
-          My messages
+        <Link to="/myitems" className="menu__link">
+          My items
         </Link>
       </div>
     </section>
   );
 }
-//   </AuthContext.Consumer>
-// );
-// }

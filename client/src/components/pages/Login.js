@@ -32,6 +32,7 @@ export default function Login() {
     };
     console.log(user);
     login(user);
+    toggleAuth();
     document.querySelector(".login__form").reset();
   };
 
@@ -58,14 +59,17 @@ export default function Login() {
             name="password"
           ></input>
         </div>
-        <Link to="/signup">
-          <span className="login__signup-link">
-            Need an account? Sign up here.
-          </span>
-        </Link>
-        <button type="submit" className="login__submit-button">
-          Login
-        </button>
+        <div className="login__button-container">
+          <Link to="/signup">
+            <span className="login__signup-link">
+              Need an account? <br />
+              Sign up here.
+            </span>
+          </Link>
+          <button type="submit" className="login__submit-button">
+            Login
+          </button>
+        </div>
       </form>
     </section>
   );

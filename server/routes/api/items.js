@@ -58,11 +58,13 @@ router.post("/", (req, res) => {
 // add conversations to an item
 router.put("/:id", (req, res) => {
   console.log(req);
+  const timestamp = Date.now();
   const newMessage = {
     id: helper.getNewId(),
     sentBy: req.body.sentBy,
     item: req.body.item,
     itemOwner: req.body.itemOwner,
+    timestamp: timestamp,
     text: req.body.text
   };
   const found = items.some(item => item.id === req.params.id);
@@ -70,9 +72,9 @@ router.put("/:id", (req, res) => {
     items.forEach(item => {
       if (item.id === req.params.id) {
         item.conversations.push(newMessage);
+        helper.writeJSONFile(allItems, items);
+        res.json(item.conversations);
       }
-      helper.writeJSONFile(allItems, items);
-      res.json(items);
     });
   } else {
     res

@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import axios from "axios";
 
 export class NewItem extends Component {
-  state = { isLoggedIn: false, loading: true, user: {}, items: [] };
+  state = { loading: true, user: {}, items: [] };
 
   componentDidMount() {
     let user = localStorage.getItem("user");
@@ -16,6 +16,7 @@ export class NewItem extends Component {
   render() {
     const createNewItem = item => {
       axios.post("/items", {
+        ownedBy: item.ownedBy,
         title: item.title,
         type: item.type,
         text: item.text,
@@ -25,7 +26,6 @@ export class NewItem extends Component {
 
     const newItem = event => {
       event.preventDefault();
-
       let item = {
         ownedBy: this.state.user.username,
         title: event.target.title.value,
@@ -41,7 +41,7 @@ export class NewItem extends Component {
     return (
       <div className="newitem">
         <form className="newitem__form" action="submit" onSubmit={newItem}>
-          <h1 className="newitem__title">Create a new post</h1>
+          <span className="newitem__title">Create a new post</span>
 
           <div className="newitem__input">
             <h3 className="newitem__label">POST TITLE</h3>
@@ -55,9 +55,13 @@ export class NewItem extends Component {
           <div className="newitem__input">
             <h3 className="newitem__label">OFFERED OR WANTED</h3>
             <input type="radio" name="type" value="OFFERED: "></input>
-            <label htmlFor="offered">Offered</label>
+            <label className="newitem__label" htmlFor="offered">
+              Offered
+            </label>
             <input type="radio" name="type" value="WANTED: "></input>
-            <label htmlFor="wanted">Wanted</label>
+            <label className="newitem__label" htmlFor="wanted">
+              Wanted
+            </label>
           </div>
 
           <div className="newitem__input">
@@ -70,15 +74,16 @@ export class NewItem extends Component {
             ></textarea>
           </div>
 
-          <div className="newitem__input">
+          <div className="newitem__input newitem__input--area">
             <h3 className="newitem__label">NEIGHBOURHOOD</h3>
-            <span>
+            <span className="newitem__explain">
               Pick the neighbourhood where you would be most likely to give away
               or pick up your item(s). This can be where you live, where you
               work, or just where you would feel comfortable meeting.
             </span>
+            <div className="dropdown"></div>
             <select className="newitem__area" name="area">
-              <option value=""></option>
+              <option value="">Choose from:</option>
               <option value="Downtown">Downtown Vancouver</option>
               <option value="North Vancouver">North Vancouver</option>
               <option value="West Vancouver">West Vancouver</option>
