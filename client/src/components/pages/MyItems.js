@@ -38,7 +38,11 @@ export default class MyItems extends Component {
           ) : (
             <div className="item__icon--wanted"></div>
           )}
-          <Link className="myitems__link" to={`/browse/${item.id}`}>
+          <Link
+            className="myitems__link"
+            key={item.id}
+            to={`/browse/${item.id}`}
+          >
             {item.title}
           </Link>
         </div>

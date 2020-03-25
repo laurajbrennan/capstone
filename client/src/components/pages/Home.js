@@ -10,7 +10,7 @@ export class Home extends Component {
           <span className="home__callout-text">
             Waste Not is a <br />
             zero-waste, zero-dollar <br />
-            exchange system.
+            exchange network.
           </span>
         </div>
         <div className="home__explainer">

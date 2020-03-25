@@ -67,9 +67,7 @@ export class Item extends Component {
                 <span className="an-item__footer-text">
                   {this.state.item.area}
                 </span>
-                <span className="an-item__footer-text">
-                  Posted (placeholder for timestamp)
-                </span>
+                <span className="an-item__footer-text">Posted 2020-03-15</span>
               </div>
             </main>
             {this.showMessage()}

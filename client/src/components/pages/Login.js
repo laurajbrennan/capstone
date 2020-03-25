@@ -57,6 +57,7 @@ export default function Login() {
             className="login__password"
             placeholder="Password"
             name="password"
+            type="password"
           ></input>
         </div>
         <div className="login__button-container">
