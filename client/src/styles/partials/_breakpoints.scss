@@ -5,9 +5,9 @@
   }
 }
 
-// media query tablet (changed from 768 to account for responsivity at in-between sizes)
+// media query tablet (changed from 768 to account for responsiveness at in-between sizes)
 @mixin medium {
-  @media only screen and (min-width: 625px) {
+  @media only screen and (min-width: 670px) {
     @content;
   }
 }
@@ -15,20 +15,6 @@
 // media query for landscape tablet and medium pixel density desktops
 @mixin large {
   @media only screen and (min-width: 1024px) {
-    @content;
-  }
-}
-
-// media query for the in-between large and huge size for the shows page
-@mixin largeish {
-  @media only screen and (min-width: 1280px) and (max-width: 1330px) {
-    @content;
-  }
-}
-
-// media query for high pixel density desktops
-@mixin huge {
-  @media only screen and (min-width: 1440px) {
     @content;
   }
 }

@@ -38,3 +38,9 @@
     font-size: 20px;
   }
 }
+
+@include medium {
+  .login {
+    padding: 50px 32px;
+  }
+}

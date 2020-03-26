@@ -24,3 +24,9 @@
     align-items: center;
   }
 }
+
+@include medium {
+  .myitems {
+    padding: 50px 32px;
+  }
+}

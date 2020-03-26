@@ -62,3 +62,9 @@
   top: 35px;
   left: 128px;
 }
+
+@include medium {
+  .newitem {
+    padding: 50px 32px;
+  }
+}

@@ -110,6 +110,15 @@ body {
       align-self: center;
 }
 
+@media only screen and (min-width: 670px) {
+  .header {
+    padding: 0 32px;
+  }
+  .header__menu {
+    left: 32px;
+  }
+}
+
 .home {
   padding: 40px 20px;
   height: 100vh;
@@ -164,6 +173,52 @@ body {
 
 .home__signup {
   float: right;
+}
+
+@media only screen and (min-width: 670px) {
+  .home {
+    padding: 60px 32px;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    height: 90vh;
+  }
+  .home__callout {
+    width: 45%;
+    height: 35%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .home__explainer {
+    width: 45%;
+    float: right;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  .home__text {
+    margin-top: 0;
+  }
+  .home__action-container {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-top: 0;
+  }
 }
 
 .menu {
@@ -223,6 +278,12 @@ body {
 
 .menu__link--bold {
   font-weight: bold;
+}
+
+@media only screen and (min-width: 670px) {
+  .menu {
+    padding: 24px 32px;
+  }
 }
 
 .browse {
@@ -330,6 +391,12 @@ body {
   margin-bottom: 8px;
 }
 
+@media only screen and (min-width: 670px) {
+  .browse {
+    padding: 32px;
+  }
+}
+
 .login {
   background-color: #c9f5e4;
   margin: 0;
@@ -392,11 +459,19 @@ body {
   font-size: 20px;
 }
 
+@media only screen and (min-width: 670px) {
+  .login {
+    padding: 50px 32px;
+  }
+}
+
 .signup {
   background-color: #c9f5e4;
   margin: 0;
   padding: 40px 20px;
-  height: 120vh;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
 }
 
 .signup__submit-button {
@@ -409,11 +484,22 @@ body {
   font-size: 14px;
 }
 
+@media only screen and (min-width: 670px) {
+  .signup {
+    padding: 50px 32px;
+  }
+  .signup__submit-button {
+    font-size: 20px;
+  }
+}
+
 .an-item {
   background-color: #f1fffa;
   margin: 0;
   padding: 40px 20px;
-  height: 100vh;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
 }
 
 .an-item__header {
@@ -480,6 +566,12 @@ body {
 .an-item__messages {
   margin-top: 24px;
   background-color: #f1fffa;
+}
+
+@media only screen and (min-width: 670px) {
+  .an-item {
+    padding: 50px 32px;
+  }
 }
 
 .message__form {
@@ -588,6 +680,12 @@ body {
           align-items: center;
 }
 
+@media only screen and (min-width: 670px) {
+  .myitems {
+    padding: 50px 32px;
+  }
+}
+
 .newitem {
   background-color: #c9f5e4;
   padding: 40px 20px;
@@ -683,5 +781,11 @@ body {
   z-index: 3000;
   top: 35px;
   left: 128px;
+}
+
+@media only screen and (min-width: 670px) {
+  .newitem {
+    padding: 50px 32px;
+  }
 }
 /*# sourceMappingURL=main.css.map */

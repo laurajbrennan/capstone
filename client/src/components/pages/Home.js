@@ -25,7 +25,9 @@ export class Home extends Component {
         </div>
         <div className="home__action-container">
           <Link to="/browse">
-            <button className="button-dark">Browse the network</button>
+            <button className="home__browse button-dark">
+              Browse the network
+            </button>
           </Link>
           <div className="home__id-container">
             <Link to="/login">

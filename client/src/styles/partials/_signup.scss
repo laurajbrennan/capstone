@@ -2,10 +2,19 @@
   background-color: $background;
   margin: 0;
   padding: 40px 20px;
-  height: 120vh;
+  height: fit-content;
   &__submit-button {
     @include darkbutton;
     width: 50%;
     font-size: 14px;
+  }
+}
+
+@include medium {
+  .signup {
+    padding: 50px 32px;
+    &__submit-button {
+      font-size: 20px;
+    }
   }
 }

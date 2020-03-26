@@ -68,3 +68,9 @@
     margin-bottom: 8px;
   }
 }
+
+@include medium {
+  .browse {
+    padding: 32px;
+  }
+}

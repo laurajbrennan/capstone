@@ -26,3 +26,12 @@
     align-self: center;
   }
 }
+
+@include medium {
+  .header {
+    padding: 0 32px;
+    &__menu {
+      left: 32px;
+    }
+  }
+}

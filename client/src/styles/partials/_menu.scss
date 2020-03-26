@@ -39,3 +39,9 @@
     }
   }
 }
+
+@include medium {
+  .menu {
+    padding: 24px 32px;
+  }
+}
