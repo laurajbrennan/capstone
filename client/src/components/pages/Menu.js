@@ -42,6 +42,18 @@ export default function Menu() {
           My items
         </Link>
       </div>
+      <footer className="menu__footer">
+        <span className="menu__footer-text">
+          &copy; Laura Brennan 2020, Capstone Project for the Web Development
+          Diploma Program @{" "}
+          <a
+            href="http://www.brainstation.io"
+            className="menu__footer-text menu__link--bold"
+          >
+            BrainStation
+          </a>
+        </span>
+      </footer>
     </section>
   );
 }

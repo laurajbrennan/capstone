@@ -38,6 +38,17 @@
       font-weight: bold;
     }
   }
+  &__footer {
+    position: absolute;
+    bottom: -150px;
+    margin: 0;
+    padding: 0;
+    &-text {
+      @include text(10px, 10px, $secondary);
+      margin: 0;
+      padding: 0;
+    }
+  }
 }
 
 @include medium {

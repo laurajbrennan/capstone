@@ -280,6 +280,22 @@ body {
   font-weight: bold;
 }
 
+.menu__footer {
+  position: absolute;
+  bottom: -150px;
+  margin: 0;
+  padding: 0;
+}
+
+.menu__footer-text {
+  font-family: "Roboto", sans-serif;
+  font-size: 10px;
+  line-height: 10px;
+  color: #049376;
+  margin: 0;
+  padding: 0;
+}
+
 @media only screen and (min-width: 670px) {
   .menu {
     padding: 24px 32px;
