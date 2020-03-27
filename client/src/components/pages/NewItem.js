@@ -2,14 +2,11 @@ import React, { Component } from "react";
 import axios from "axios";
 
 export class NewItem extends Component {
-  state = { loading: true, user: {}, items: [] };
+  state = { loading: true, user: {}, items: [], item: {} };
 
   componentDidMount() {
     let user = localStorage.getItem("user");
-    console.log(user);
-    // localStorage.setItem("user", user);
     let userParsed = JSON.parse(user)[0];
-    console.log(userParsed);
     this.setState({ user: userParsed });
   }
 
@@ -33,9 +30,14 @@ export class NewItem extends Component {
         description: event.target.description.value,
         area: event.target.area.value
       };
-      console.log(item);
-      createNewItem(item);
-      document.querySelector(".newitem__form").reset();
+      if (this.state.user.id) {
+        createNewItem(item);
+        document.querySelector(".newitem__form").reset();
+      } else {
+        return window.alert(
+          "Please log into your Waste Not account to create this new post."
+        );
+      }
     };
 
     return (
@@ -49,16 +51,17 @@ export class NewItem extends Component {
               className="newitem__post-title"
               placeholder="ex: Wooden Coffee Table"
               name="title"
+              required
             ></input>
           </div>
 
           <div className="newitem__input">
             <h3 className="newitem__label">OFFERED OR WANTED</h3>
-            <input type="radio" name="type" value="OFFERED: "></input>
+            <input type="radio" name="type" value="OFFERED: " required></input>
             <label className="newitem__label" htmlFor="offered">
               Offered
             </label>
-            <input type="radio" name="type" value="WANTED: "></input>
+            <input type="radio" name="type" value="WANTED: " required></input>
             <label className="newitem__label" htmlFor="wanted">
               Wanted
             </label>
@@ -71,6 +74,7 @@ export class NewItem extends Component {
               type="textarea"
               placeholder="ex: I've got a wooden coffee table that doesn't work in my living room anymore, who wants it?"
               name="description"
+              required
             ></textarea>
           </div>
 
@@ -82,7 +86,7 @@ export class NewItem extends Component {
               work, or just where you would feel comfortable meeting.
             </span>
             <div className="dropdown"></div>
-            <select className="newitem__area" name="area">
+            <select className="newitem__area" name="area" required>
               <option value="">Choose from:</option>
               <option value="Downtown">Downtown Vancouver</option>
               <option value="North Vancouver">North Vancouver</option>

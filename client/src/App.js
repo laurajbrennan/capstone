@@ -11,7 +11,6 @@ import MyItems from "./components/pages/MyItems";
 import Login from "./components/pages/Login";
 import Signup from "./components/pages/Signup";
 import NewItem from "./components/pages/NewItem";
-import AuthContextProvider from "./contexts/AuthContext";
 import UserContextProvider from "./contexts/UserContext";
 
 class App extends Component {
@@ -19,56 +18,54 @@ class App extends Component {
     return (
       <div className="App">
         <UserContextProvider>
-          <AuthContextProvider>
-            <Router>
-              <Switch>
-                <Route path="/" exact>
-                  <Header />
-                  <Home />
-                </Route>
+          <Router>
+            <Switch>
+              <Route path="/" exact>
+                <Header />
+                <Home />
+              </Route>
 
-                <Route path="/menu" exact>
-                  <Menu />
-                </Route>
+              <Route path="/menu" exact>
+                <Menu />
+              </Route>
 
-                <Route path="/browse" exact>
-                  <Header />
-                  <Browse />
-                </Route>
+              <Route path="/browse" exact>
+                <Header />
+                <Browse />
+              </Route>
 
-                <Route
-                  path="/browse/:id"
-                  exact
-                  render={routerProps => (
-                    <>
-                      <Header />
-                      <Item {...routerProps} />
-                    </>
-                  )}
-                />
+              <Route
+                path="/browse/:id"
+                exact
+                render={routerProps => (
+                  <>
+                    <Header />
+                    <Item {...routerProps} />
+                  </>
+                )}
+              />
 
-                <Route path="/new" exact>
-                  <Header />
-                  <NewItem />
-                </Route>
+              <Route path="/new" exact>
+                <Header />
+                <NewItem />
+              </Route>
 
-                <Route path="/myitems" exact>
-                  <Header />
-                  <MyItems />
-                </Route>
+              <Route path="/myitems" exact>
+                <Header />
+                <MyItems />
+              </Route>
 
-                <Route path="/login" exact>
-                  <Header />
-                  <Login />
-                </Route>
+              <Route path="/login" exact>
+                <Header />
+                <Login />
+              </Route>
 
-                <Route path="/signup" exact>
-                  <Header />
-                  <Signup />
-                </Route>
-              </Switch>
-            </Router>
-          </AuthContextProvider>
+              <Route path="/signup" exact>
+                <Header />
+                <Signup />
+              </Route>
+            </Switch>
+          </Router>
         </UserContextProvider>
       </div>
     );

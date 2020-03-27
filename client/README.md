@@ -1,13 +1,24 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Waste Not
+
+This capstone project was created by Laura Brennan for the completion of the Web Development Diploma Program at BrainStation.
+
+I created this app because I love the Freecycle network and zero-waste ethos, but I noticed that their [website](https://www.freecycle.org) is pretty outdated - it's nonresponsive, very difficult to use on anything smaller than a desktop computer screen, and not very pretty. I decided to base my project on Freecycle - i.e. a message board-style application that allows users to post about items they want, or items they have and would like to offer up for grabs - but focus on making it mobile-first, tablet-friendly, and stylish in its simplicity.
+
+.
+.
+
+## Project tech specs
+
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).<br />I used React and React Router Dom to write the front end, while my server is Express.js and Node.js. My next project steps will be migrating my data from the built-in JSON models to a database.
 
 ## Available Scripts
 
 In the project directory, you can run:
 
-### `npm start`
+### `npm run dev`
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Runs the app in the development mode. Run this once you navigate into the server file on your terminal.<br />
+The app will start at [http://localhost:3000](http://localhost:3000), while the API will host at [http://localhost:5000](http://localhost:5000).
 
 The page will reload if you make edits.<br />
 You will also see any lint errors in the console.
@@ -42,27 +53,3 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
 To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify

@@ -46,19 +46,13 @@
     @include darkbutton;
     width: 100%;
     margin-top: 24px;
+    font-size: 16px;
   }
 }
 
 .dropdown {
-  background-image: url("../assets/icons/play.svg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-  height: 20px;
-  width: 20px;
-  transform: rotate(90deg);
+  @include dropdown;
   position: relative;
-  z-index: 3000;
   top: 35px;
   left: 128px;
 }

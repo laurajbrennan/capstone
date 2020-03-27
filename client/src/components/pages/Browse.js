@@ -3,21 +3,35 @@ import { Link } from "react-router-dom";
 import axios from "axios";
 
 export class Browse extends Component {
-  state = { loading: true, user: {}, items: [] };
+  state = { loading: true, user: {}, items: [], area: {}, filteredItems: [] };
 
   componentDidMount() {
     axios.get("/items").then(response => {
-      // console.log(response.data);
+      console.log(response);
       this.setState({
-        items: response.data,
         loading: false,
-        user: localStorage.getItem("user")
+        user: localStorage.getItem("user"),
+        items: response.data,
+        filteredItems: response.data
       });
+      console.log(this.state.filteredItems);
     });
   }
 
   render() {
-    const buildItems = this.state.items.map(item => {
+    const handleChange = e => {
+      let area = e.target.value;
+      console.log(area);
+      let filteredItems = this.state.items.filter(item => item.area === area);
+      console.log(filteredItems);
+      if (filteredItems[0]) {
+        this.setState({ area: area, filteredItems: filteredItems });
+      } else {
+        let filteredItems = this.state.items;
+        this.setState({ area: "", filteredItems: filteredItems });
+      }
+    };
+    const buildItems = this.state.filteredItems.map(item => {
       return (
         <div className="item" key={item.id}>
           <Link to={`/browse/${item.id}`} id={item.id}>
@@ -43,10 +57,27 @@ export class Browse extends Component {
     } else {
       return (
         <section className="browse">
-          <button className="browse__filter">
-            Filter by neighbourhood
+          {/* this filter for the list of items is not currently functional */}
+          <form className="browse__form">
             <div className="browse__dropdown"></div>
-          </button>
+            <select
+              className="browse__filter"
+              name="area"
+              value={this.state.area}
+              onChange={handleChange}
+            >
+              <option value="">Filter by neighbourhood</option>
+              <option value="">View all</option>
+              <option value="Downtown">Downtown Vancouver</option>
+              <option value="North Vancouver">North Vancouver</option>
+              <option value="West Vancouver">West Vancouver</option>
+              <option value="Burnaby">Burnaby</option>
+              <option value="Surrey">Surrey</option>
+              <option value="Coquitlam">Coquitlam</option>
+              <option value="New Westminster">New Westminster</option>
+              <option value="UBC">UBC</option>
+            </select>
+          </form>
           {buildItems}
         </section>
       );

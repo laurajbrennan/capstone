@@ -13,12 +13,18 @@ export class Messages extends Component {
     );
     const showMessages = messages.map(message => {
       if (message.sentBy === username) {
+        const timestamp = message.timestamp;
+        const dateObj = new Date(timestamp);
+        const date = dateObj.getDate();
+        const month = dateObj.getMonth() + 1;
+        const year = dateObj.getFullYear();
+        console.log(date, month, year);
         return (
           <div className="message__container" key={message.id}>
             <div className="message__labels">
               <span className="message__sender">Sent by: {username}</span>
               <span className="message__sent-date">
-                Date sent: (placeholder)
+                Date sent: {year}-{month}-{date}
               </span>
             </div>
 

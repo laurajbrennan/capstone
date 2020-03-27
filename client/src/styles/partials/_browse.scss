@@ -13,7 +13,6 @@
 .browse {
   background-color: $background-light;
   padding: 20px;
-
   &__filter {
     margin: 12px 0 32px 0;
     @include lightbutton;
@@ -22,15 +21,16 @@
     padding: 8px 16px;
     align-items: center;
     justify-content: space-between;
+    font-size: 16px;
+  }
+  &__form {
+    position: relative;
   }
   &__dropdown {
-    background-image: url("../assets/icons/play.svg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
-    height: 20px;
-    width: 20px;
-    transform: rotate(90deg);
+    @include dropdown;
+    position: absolute;
+    top: 16px;
+    right: 20px;
   }
 }
 
@@ -41,24 +41,20 @@
   align-items: flex-start;
   border-bottom: 2px solid $primary;
   margin-bottom: 16px;
-
   &__icon--offered {
     @include icon;
     background-image: url("../assets/icons/offered.svg");
   }
-
   &__icon--wanted {
     @include icon;
     background-image: url("../assets/icons/wanted.svg");
   }
-
   &__text {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     align-items: flex-start;
   }
-
   &__type,
   &__text {
     @include text(16px, 16px, $black);

@@ -11,13 +11,14 @@
     height: 80px;
     padding: 16px;
     border-radius: 10px;
-    border: 2px solid $secondary;
+    border: 2px solid $primary;
   }
   &__submit {
     @include darkbutton;
     width: 50%;
     margin-top: 24px;
     float: right;
+    font-size: 16px;
   }
   &__container {
     margin-top: 24px;
