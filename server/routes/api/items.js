@@ -83,12 +83,12 @@ router.put("/:id", (req, res) => {
   }
 });
 
-// delete an item
-router.delete("/:id", (req, res) => {
-  const found = items.some(item => item.id === req.params.id);
-  if (found) {
-    console.log(found);
-  }
-});
+// delete an item -- this currently is not being used, so it's commented out for now
+// router.delete("/:id", (req, res) => {
+//   const found = items.some(item => item.id === req.params.id);
+//   if (found) {
+//     console.log(found);
+//   }
+// });
 
 module.exports = router;
