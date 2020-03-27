@@ -4,9 +4,6 @@ This capstone project was created by Laura Brennan for the completion of the Web
 
 I created this app because I love the Freecycle network and zero-waste ethos, but I noticed that their [website](https://www.freecycle.org) is pretty outdated - it's nonresponsive, very difficult to use on anything smaller than a desktop computer screen, and not very pretty. I decided to base my project on Freecycle - i.e. a message board-style application that allows users to post about items they want, or items they have and would like to offer up for grabs - but focus on making it mobile-first, tablet-friendly, and stylish in its simplicity.
 
-.
-.
-
 ## Project tech specs
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).<br />I used React and React Router Dom to write the front end, while my server is Express.js and Node.js. My next project steps will be migrating my data from the built-in JSON models to a database.

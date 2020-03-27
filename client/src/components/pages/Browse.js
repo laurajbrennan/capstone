@@ -68,13 +68,14 @@ export class Browse extends Component {
             >
               <option value="">Filter by neighbourhood</option>
               <option value="">View all</option>
-              <option value="Downtown">Downtown Vancouver</option>
+              <option value="Downtown Vancouver">Downtown Vancouver</option>
               <option value="North Vancouver">North Vancouver</option>
               <option value="West Vancouver">West Vancouver</option>
               <option value="Burnaby">Burnaby</option>
               <option value="Surrey">Surrey</option>
               <option value="Coquitlam">Coquitlam</option>
               <option value="New Westminster">New Westminster</option>
+              <option value="Richmond">Richmond</option>
               <option value="UBC">UBC</option>
             </select>
           </form>
